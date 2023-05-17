@@ -58,7 +58,6 @@ body {
     border-radius: 0.25em;
     cursor: pointer;
     outline: none;
-    /* margin-bottom: 10px; */
 }
 
 .btn:hover,
