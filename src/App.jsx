@@ -6,15 +6,18 @@ import { TodoList } from "./TodoList"
 
 export default function App() {
   const [todos, setTodos] = useState(() => {
+    // Retrieving todos from localStorage when the component mounts
     const localValue = localStorage.getItem('ITEMS')
     if (localValue == null) return []
     return JSON.parse(localValue)
   })
 
+  // Storing Items in localStorage when the todos state changes
   useEffect(() => {
     localStorage.setItem('ITEMS', JSON.stringify(todos))
   }, [todos])
 
+  // Adding Todo lists
   function addTodo(title) {
      setTodos(currentTodos => {
         return [
@@ -36,6 +39,7 @@ export default function App() {
     })
   }
 
+  // Deleting Todo Lists
   function deleteTodo(id) {
     setTodos(currentTodos => {
       return currentTodos.filter(todo => todo.id !== id)
