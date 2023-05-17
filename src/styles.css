@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -12,7 +12,11 @@ body {
     color: hsl(200, 100%, 90%);
     max-width: 400px;
     padding: 1rem;
-    margin: 0 auto;
+    margin: 0 auto; 
+}
+
+#root {
+    margin-top: 20vh;
 }
 
 .new-item-form {
@@ -27,6 +31,11 @@ body {
     gap: 0.1rem;
 }
 
+.form-row label {
+    font-size: 2rem;
+    margin-bottom: 5pxh;
+}
+
 .new-item-form input {
     outline: none;
     border: 1px solid hsl(200, 100%, 40%);
@@ -34,6 +43,7 @@ body {
     border-radius: 0.25em;
     padding: 0.25em 0.5em;
     color: hsl(200, 100%, 90%);
+    font-size: 1rem;
 }
 
 .new-item-form input:focus {
@@ -48,6 +58,7 @@ body {
     border-radius: 0.25em;
     cursor: pointer;
     outline: none;
+    /* margin-bottom: 10px; */
 }
 
 .btn:hover,
@@ -69,7 +80,7 @@ body {
 .header {
     font-size: 1.5rem;
     margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .list {
@@ -86,7 +97,7 @@ body {
 .list {
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 1.2rem;
 }
 
 .list li {
